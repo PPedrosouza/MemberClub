@@ -1,0 +1,75 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--color-pink: #d658b3;
+	--color-green: #45b442;
+
+	--gray-700: #332b31;
+	--gray-600: #4a4448;
+	--gray-500: #756c71;
+	--gray-400: #d3cfd2;
+	--gray-300: #dfdcdf;
+	--gray-200: #e9e7e9;
+	--gray-100: #f4f1f2;
+	--white: #ffffff;
+
+	--gradient-base: linear-gradient(
+		90deg,
+		#2daa6e 0%,
+		#2daaaa 33.33%,
+		#856ccf 66.67%,
+		#d658b3 100%
+	);
+
+	--ff-base: "Oxygen", sans-serif;
+
+  --font-title-md: 1.5rem; /* 24px */
+  --font-title-sm: 1.125rem; /* 18px */
+  --font-subtitle-md: 0.875rem; /* 14px */
+  --font-subtitle-sm: 0.75rem; /* 12px */
+  --font-text-md: 1rem; /* 16px */
+  --font-text-sm: 0.875rem; /* 14px */
+  --font-text-xs: 0.75rem; /* 12px */
+
+  /* Line Height */
+  --line-height: 1.4; /* 140% */
+
+  /* Font Weights */
+  --font-weight-bold: bold;
+  --font-weight-regular: regular;
+
+  /* Text Case */
+  --text-case-default: none;
+  --text-case-uppercase: uppercase;
+}
+
+html,
+button {
+	font: 500 1rem / 1.5rem "Oxygen", sans-serif;
+}
+
+h1,
+h2 {
+	font-family: "Oxygen", sans-serif;
+}
+
+h1 {
+	font-size: var(--text-xl);
+	line-height: 1.25;
+}
+
+h2 {
+	font-size: var(--text-lg);
+	line-height: 1.2;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
