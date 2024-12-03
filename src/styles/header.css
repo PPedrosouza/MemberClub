@@ -1,0 +1,43 @@
+header {
+	box-sizing: border-box;
+
+	& .image-div {
+		& img {
+			position: absolute;
+			width: 116px;
+			height: 56px;
+			left: calc(50% - 116px / 2);
+			top: 64px;
+		}
+	}
+
+	& .search-div {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		margin-top: 152px;
+
+		& input {
+			position: absolute;
+			padding: 8px 16px;
+			width: 400px;
+			height: 56px;
+			background: #dfdcdf;
+			border: 1px solid #cecacd;
+			border-radius: 12px;
+			outline: none;
+			font-size: 16px;
+		}
+
+		& button {
+			position: absolute;
+			margin-left: 345px;
+			padding: 8px 16px;
+			width: 40px;
+			height: 40px;
+			background: #dfdcdf;
+
+		}
+	}
+}
