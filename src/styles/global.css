@@ -29,24 +29,24 @@
 
 	--ff-base: "Oxygen", sans-serif;
 
-  --font-title-md: 1.5rem; /* 24px */
-  --font-title-sm: 1.125rem; /* 18px */
-  --font-subtitle-md: 0.875rem; /* 14px */
-  --font-subtitle-sm: 0.75rem; /* 12px */
-  --font-text-md: 1rem; /* 16px */
-  --font-text-sm: 0.875rem; /* 14px */
-  --font-text-xs: 0.75rem; /* 12px */
+	--font-title-md: 1.5rem; /* 24px */
+	--font-title-sm: 1.125rem; /* 18px */
+	--font-subtitle-md: 0.875rem; /* 14px */
+	--font-subtitle-sm: 0.75rem; /* 12px */
+	--font-text-md: 1rem; /* 16px */
+	--font-text-sm: 0.875rem; /* 14px */
+	--font-text-xs: 0.75rem; /* 12px */
 
-  /* Line Height */
-  --line-height: 1.4; /* 140% */
+	/* Line Height */
+	--line-height: 1.4; /* 140% */
 
-  /* Font Weights */
-  --font-weight-bold: bold;
-  --font-weight-regular: regular;
+	/* Font Weights */
+	--font-weight-bold: bold;
+	--font-weight-regular: regular;
 
-  /* Text Case */
-  --text-case-default: none;
-  --text-case-uppercase: uppercase;
+	/* Text Case */
+	--text-case-default: none;
+	--text-case-uppercase: uppercase;
 }
 
 html,
