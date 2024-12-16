@@ -12,21 +12,39 @@
         href="https://fonts.googleapis.com/css2?family=Alice&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,500;1,500&family=Oxygen:wght@300;400;700&family=Poppins:wght@400;700&family=Syne:wght@700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./src/styles/index.css">
+    <script></script>
     <title>MemberClub</title>
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <div class="image-div">
             <img src="./src/assets/images/Logo.png" alt="logo">
         </div>
         <form action="" class="search-div">
-            <input type="text" placeholder="ID do cartão">
-            <a href="#" class="search-button">
-                <img src="./src/assets/icons/default-button.svg" alt="">
+            <input type="text" name="ID" id="ID" placeholder="ID do cartão">
+            <a href="#" class="search-button" id="search-button">
+                <img src="./src/assets/icons/arrow-button.svg"  id="search-icon" />
             </a>
         </form>
     </header>
+
+    <script>
+        const input = document.getElementById('ID');
+        const searchDiv = document.getElementById('search-button');
+        
+        input.addEventListener('input', () => {
+            if (input.value.trim() !== '') {
+                searchDiv.style.opacity = "1";
+                input.style.color = "#332b31";
+            } else {
+                searchDiv.style.opacity = "0.6";
+                input.style.color = "#332b31";
+            }
+
+        });
+
+    </script>
 </body>
 
 </html>
