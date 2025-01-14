@@ -459,8 +459,7 @@
 		align-self: stretch;
 		flex-grow: 1;
 
-
-		& .card-header {
+		& .card {
 			/* Card */
 
 			box-sizing: border-box;
@@ -488,7 +487,7 @@
 			align-self: stretch;
 			flex-grow: 0;
 
-			& header {
+			& .header {
 				/* Header */
 
 				/* Auto layout */
@@ -509,8 +508,6 @@
 				z-index: 0;
 
 				& h3 {
-					/* Cartão Fidelidade */
-
 					width: 119px;
 					height: 17px;
 
@@ -537,7 +534,6 @@
 				}
 
 				& span {
-
 					width: 306px;
 					height: 20px;
 
@@ -563,104 +559,296 @@
 				}
 			}
 
+			& .slots {
+				/* Slots */
+
+				/* Auto layout */
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				align-items: flex-start;
+				align-content: flex-start;
+				padding: 0px;
+				gap: 16px;
+
+				width: 504px;
+				height: 192px;
+
+
+				/* Inside auto layout */
+				flex: none;
+				order: 1;
+				align-self: stretch;
+				flex-grow: 0;
+				z-index: 1;
+
+				& .item {
+					/* Item */
+
+					width: 88px;
+					height: 88px;
+
+					/* Base/Gray-200 */
+					background: #E9E7E9;
+					backdrop-filter: blur(5px);
+					/* Note: backdrop-filter has minimal browser support */
+					border-radius: 20px;
+
+					/* Inside auto layout */
+					flex: none;
+					order: 0;
+					flex-grow: 0;
+
+					& .gift-default {
+						/* PinCheck */
+
+						position: absolute;
+						width: 64px;
+						height: 64px;
+						left: calc(50% - 64px/2);
+						top: calc(50% - 64px/2);
+					}
+
+					& .gift-icon {
+						/* Icons */
+
+						position: absolute;
+						width: 40px;
+						height: 40px;
+						left: calc(50% - 40px/2);
+						top: calc(50% - 40px/2);
+
+						opacity: 0.35;
+					}
+
+				}
+			}
+
+			& .id-tag {
+				/* ID Tag */
+
+				/* Auto layout */
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				padding: 0px 12px;
+				gap: 8px;
+
+				position: absolute;
+				width: 149px;
+				height: 32px;
+				right: 32px;
+				top: 32px;
+
+				/* Base/Gray-300 */
+				background: #DFDCDF;
+				border-radius: 999px;
+
+				/* Inside auto layout */
+				flex: none;
+				order: 2;
+				flex-grow: 0;
+				z-index: 2;
+
+				& h3 {
+					/* ID: 124-537-835-230 */
+
+					width: 125px;
+					height: 20px;
+
+					/* Heading/Subtitle Md */
+					font-family: 'Oxygen';
+					font-style: normal;
+					font-weight: 700;
+					font-size: 14px;
+					line-height: 140%;
+					/* identical to box height, or 20px */
+					display: flex;
+					align-items: center;
+					text-transform: uppercase;
+
+					/* Base/Gray-500 */
+					color: #756C71;
+
+
+					/* Inside auto layout */
+					flex: none;
+					order: 0;
+					flex-grow: 0;
+
+				}
+			}
 		}
 
-		& .slots {
-			/* Slots */
+		& .progress {
+			/* Progress */
+
+			box-sizing: border-box;
 
 			/* Auto layout */
 			display: flex;
 			flex-direction: row;
-			flex-wrap: wrap;
-			align-items: flex-start;
-			align-content: flex-start;
-			padding: 0px;
-			gap: 16px;
+			align-items: center;
+			padding: 32px;
+			gap: 32px;
 
-			width: 504px;
-			height: 192px;
+			width: 568px;
+			height: 117px;
 
+			/* Base/Gray-100 */
+			background: #F4F1F2;
+			/* Base/Gray-300 */
+			border: 1px solid #DFDCDF;
+			border-radius: 16px;
 
 			/* Inside auto layout */
 			flex: none;
 			order: 1;
 			align-self: stretch;
-			flex-grow: 0;
-			z-index: 1;
+			flex-grow: 1;
 
-			& .item {
+			& .content {
+				/* Content */
+
+				/* Auto layout */
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				align-items: flex-start;
+				padding: 0px;
+				gap: 12px;
+
+				width: 400px;
+				height: 63px;
+
+
+				/* Inside auto layout */
+				flex: none;
+				order: 0;
+				flex-grow: 1;
+
+				& h2 {
+					/* 3 cortes restantes */
+
+					width: 135px;
+					height: 34px;
+
+					/* Heading md */
+					font-family: 'Oxygen';
+					font-style: normal;
+					font-weight: 300;
+					font-size: 18px;
+					line-height: 140%;
+					/* identical to box height, or 34px */
+
+					/* Base/Gray-600 */
+					color: #4A4448;
+
+					/* Inside auto layout */
+					flex: none;
+					order: 0;
+					flex-grow: 0;
+
+					& strong {
+						font-size: 24px;
+						font-weight: 700;
+					}
+				}
+
+				& .linear-progress {
+					/* LinearProgress */
+
+					/* Auto layout */
+					display: flex;
+					flex-direction: row;
+					justify-content: center;
+					align-items: center;
+					padding: 0px;
+					gap: 12px;
+
+					width: 400px;
+					height: 17px;
+
+
+					/* Inside auto layout */
+					flex: none;
+					order: 1;
+					align-self: stretch;
+					flex-grow: 0;
+
+					& .bar {
+						/* Bar */
+
+						/* Auto layout */
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: flex-start;
+						padding: 0px 107.7px 0px 0px;
+						gap: 8px;
+
+						width: 351px;
+						height: 8px;
+
+						/* Base/Gray-300 */
+						background: #DFDCDF;
+						border-radius: 9999px;
+
+						/* Inside auto layout */
+						flex: none;
+						order: 0;
+						flex-grow: 1;
+
+					}
+
+					& span {
+						/* 7 de 10 */
+
+						width: 37px;
+						height: 17px;
+
+						/* Body/Text Xs */
+						font-family: 'Oxygen';
+						font-style: normal;
+						font-weight: 400;
+						font-size: 12px;
+						line-height: 140%;
+						/* identical to box height, or 17px */
+						display: flex;
+						align-items: center;
+
+						/* Base/Gray-500 */
+						color: #756C71;
+
+
+						/* Inside auto layout */
+						flex: none;
+						order: 1;
+						flex-grow: 0;
+
+					}
+				}
+			}
+
+			& .progress-item {
 				/* Item */
 
-				width: 88px;
-				height: 88px;
+				width: 72px;
+				height: 72px;
 
 				/* Base/Gray-200 */
 				background: #E9E7E9;
-				backdrop-filter: blur(5px);
-				/* Note: backdrop-filter has minimal browser support */
-				border-radius: 20px;
+				border-radius: 999px;
 
 				/* Inside auto layout */
 				flex: none;
-				order: 0;
+				order: 1;
 				flex-grow: 0;
 
-			}
-		}
-
-		& .id-tag {
-			/* ID Tag */
-
-			/* Auto layout */
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			padding: 0px 12px;
-			gap: 8px;
-
-			position: absolute;
-			width: 149px;
-			height: 32px;
-			right: 32px;
-			top: 32px;
-
-			/* Base/Gray-300 */
-			background: #DFDCDF;
-			border-radius: 999px;
-
-			/* Inside auto layout */
-			flex: none;
-			order: 2;
-			flex-grow: 0;
-			z-index: 2;
-
-			& h3 {
-				/* ID: 124-537-835-230 */
-
-				width: 125px;
-				height: 20px;
-
-				/* Heading/Subtitle Md */
-				font-family: 'Oxygen';
-				font-style: normal;
-				font-weight: 700;
-				font-size: 14px;
-				line-height: 140%;
-				/* identical to box height, or 20px */
-				display: flex;
-				align-items: center;
-				text-transform: uppercase;
-
-				/* Base/Gray-500 */
-				color: #756C71;
-
-
-				/* Inside auto layout */
-				flex: none;
-				order: 0;
-				flex-grow: 0;
-
+				& .progress-gift-icon {
+					
+				}
 			}
 		}
 	}
