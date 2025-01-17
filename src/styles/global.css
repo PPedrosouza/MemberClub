@@ -36,6 +36,8 @@
 	--font-text-md: 1rem; /* 16px */
 	--font-text-sm: 0.875rem; /* 14px */
 	--font-text-xs: 0.75rem; /* 12px */
+	--font-text-lg: 2.5rem;
+	--font-text-xl: 4rem;
 
 	/* Line Height */
 	--line-height: 1.4; /* 140% */
@@ -60,12 +62,12 @@ h2 {
 }
 
 h1 {
-	font-size: var(--text-xl);
+	font-size: var(--font-text-xl);
 	line-height: 1.25;
 }
 
 h2 {
-	font-size: var(--text-lg);
+	font-size: var(--font-text-lg);
 	line-height: 1.2;
 }
 

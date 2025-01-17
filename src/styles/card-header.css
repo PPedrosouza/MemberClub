@@ -1,0 +1,128 @@
+.header {
+    display: inline-block;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0rem;
+    gap: 0.25rem;
+
+    width: 19.125rem;
+    height: 2.5625rem;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    z-index: 0;
+
+    & h3 {
+        width: 7.4375rem;
+        height: 1.0625rem;
+
+        font-family: 'Oxygen';
+        font-style: normal;
+        font-weight: 700;
+        font-size: var(--font-subtitle-sm);
+        line-height: 140%;
+
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+
+        color: var(--gray-500);
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+
+    & span {
+        width: 19.125rem;
+        height: 1.25rem;
+
+        font-family: 'Oxygen';
+        font-style: normal;
+        font-weight: 400;
+        font-size: var(--font-text-sm);
+        line-height: 140%;
+
+        display: flex;
+        align-items: center;
+
+        color: var(--gray-500);
+
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }
+}
+
+@media (width <=80em) {
+    .header {
+        /* Header */
+
+        /* Auto layout */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 4px;
+
+        width: 172px;
+        height: 55px;
+
+        flex: none;
+        order: 0;
+        flex-grow: 1;
+
+        & h3 {
+            width: 119px;
+            height: 17px;
+
+            /* Heading/Subtitle Sm */
+            font-family: 'Oxygen';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 140%;
+            /* identical to box height, or 17px */
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+
+            /* Base/Gray-500 */
+            color: #756C71;
+
+
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+
+        }
+
+        & span {
+            width: 172px;
+            height: 34px;
+
+            /* Body/Text Xs */
+            font-family: 'Oxygen';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 140%;
+            /* or 17px */
+            display: flex;
+            align-items: center;
+
+            /* Base/Gray-500 */
+            color: #756C71;
+
+
+            /* Inside auto layout */
+            flex: none;
+            order: 1;
+            align-self: stretch;
+            flex-grow: 0;
+
+        }
+    }
+}

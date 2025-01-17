@@ -1,0 +1,74 @@
+.slots {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    padding: 0rem;
+    gap: 1rem;
+
+    width: 31.5rem;
+    height: 12rem;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    z-index: 1;
+
+    & .item {
+        width: 5.5rem;
+        height: 5.5rem;
+
+        background: var(--gray-200);
+        backdrop-filter: blur(0.3125rem);
+        border-radius: 1.25rem;
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+
+        & .gift-default {
+            position: absolute;
+            width: 4rem;
+            height: 4rem;
+            left: calc(50% - 4rem / 2);
+            top: calc(50% - 4rem / 2);
+        }
+
+        & .gift-icon {
+            position: absolute;
+            width: 2.5rem;
+            height: 2.5rem;
+            left: calc(50% - 2.5rem / 2);
+            top: calc(50% - 2.5rem / 2);
+
+            opacity: 0.35;
+        }
+    }
+}
+
+@media (width <=80em) {
+    .slots {
+        /* Slots */
+
+        /* Auto layout */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        align-content: flex-start;
+        padding: 0px;
+        gap: 8px;
+
+        width: 312px;
+        height: 120px;
+
+
+        /* Inside auto layout */
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+
+    }
+}

@@ -1,3 +1,12 @@
 @import url(./global.css);
 @import url(./header.css);
 @import url(./main.css);
+@import url(./aside.css);
+@import url(./user.css);
+@import url(./history-list.css);
+@import url(./card.css);
+@import url(./card-header.css);
+@import url(./card-slots.css);
+@import url(./card-id-tag.css);
+@import url(./progress.css);
+@import url(./input.css);

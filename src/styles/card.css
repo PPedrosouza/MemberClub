@@ -1,0 +1,70 @@
+#column-two {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0rem;
+    gap: 1rem;
+
+    width: 35.5rem;
+    height: 29.125rem;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 1;
+
+    & .card {
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2.25rem 2rem 2rem;
+        gap: 2rem;
+        isolation: isolate;
+
+        width: 35.5rem;
+        height: 20.8125rem;
+
+        background: var(--gray-100);
+        border: 0.0625rem solid var(--gray-100);
+        ;
+        border-radius: 1.25rem;
+
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+    }
+}
+
+@media (width <=80em) {
+    #column-two {
+        /* Card */
+
+        box-sizing: border-box;
+
+        /* Auto layout */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 20px 20px;
+        gap: 20px;
+
+        width: 351px;
+        height: 239px;
+
+        /* Base/Gray-100 */
+        background: #F4F1F2;
+        /* Base/Gray-300 */
+        border: 1px solid #DFDCDF;
+        border-radius: 16px;
+
+        /* Inside auto layout */
+        flex: none;
+        order: 1;
+        align-self: stretch;
+        flex-grow: 0;
+
+    }
+}
