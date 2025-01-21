@@ -1,8 +1,217 @@
-Html Webpack Plugin:
-<pre>
-  Error: HtmlWebpackPlugin: could not load file C:\MemberClub\src\assets\icons\scissors.svg
-  
-  - index.js:778 
-    [MemberClub]/[html-webpack-plugin]/index.js:778:35
-  
-</pre>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alice&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,500;1,500&family=Oxygen:wght@300;400;700&family=Poppins:wght@400;700&family=Syne:wght@700&display=swap"
+        rel="stylesheet">
+
+    <title>MemberClub</title>
+<link rel="icon" href="scissors.svg"><script defer src="main.js"></script></head>
+
+<body>
+    <header id="header">
+        <div class="image-div">
+            <img src="./src/assets/images/Logo.png" alt="logo">
+        </div>
+        <form action="" class="search-div">
+            <input type="text" name="ID" id="ID" placeholder="ID do cartão">
+            <a href="#" class="search-button" id="search-button">
+                <img src="./src/assets/icons/arrow-button.svg" id="search-icon" />
+            </a>
+        </form>
+    </header>
+
+    <main id="content">
+        <div id="column-one">
+            <div id="user">
+                <img id="avatar" src="../src/assets/images/avatar.png" alt="avatar">
+                <div id="info">
+                    <h3>Natália Miranda</h3>
+                    <span>Cliente desde 18/09/2023</span>
+                </div>
+            </div>
+
+            <div id="history">
+                <header id="history-header">
+                    <h4>Histórico</h4>
+                    <span>7 cortes</span>
+                </header>
+                <div id="history-list">
+                    <div class="history-row">
+                        <div class="history-row-title">
+                            <p>29/04/2024</p>
+                            <span>18:30</span>
+                        </div>
+
+                        <div class="history-row-icon">
+                            <img class="history-row-image" src="../src/assets/icons/check-colorfull.svg" alt="check">
+                        </div>
+                    </div>
+                    <div class="history-row">
+                        <div class="history-row-title">
+                            <p>29/04/2024</p>
+                            <span>18:30</span>
+                        </div>
+
+                        <div class="history-row-icon">
+                            <img class="history-row-image" src="../src/assets/icons/check-colorfull.svg" alt="check">
+                        </div>
+
+                    </div>
+                    <div class="history-row">
+                        <div class="history-row-title">
+                            <p>29/04/2024</p>
+                            <span>18:30</span>
+                        </div>
+
+                        <div class="history-row-icon">
+                            <img class="history-row-image" src="../src/assets/icons/check-colorfull.svg" alt="check">
+                        </div>
+
+                    </div>
+                    <div class="history-row">
+                        <div class="history-row-title">
+                            <p>29/04/2024</p>
+                            <span>18:30</span>
+                        </div>
+
+                        <div class="history-row-icon">
+                            <img class="history-row-image" src="../src/assets/icons/check-colorfull.svg" alt="check">
+                        </div>
+
+                    </div>
+                    <div class="history-row">
+                        <div class="history-row-title">
+                            <p>29/04/2024</p>
+                            <span>18:30</span>
+                        </div>
+
+                        <div class="history-row-icon">
+                            <img class="history-row-image" src="../src/assets/icons/check-colorfull.svg" alt="check">
+                        </div>
+
+                    </div>
+                    <div class="history-row">
+                        <div class="history-row-title">
+                            <p>29/04/2024</p>
+                            <span>18:30</span>
+                        </div>
+
+                        <div class="history-row-icon">
+                            <img class="history-row-image" src="../src/assets/icons/check-colorfull.svg" alt="check">
+                        </div>
+
+                    </div>
+                    <div class="history-row">
+                        <div class="history-row-title">
+                            <p>29/04/2024</p>
+                            <span>18:30</span>
+                        </div>
+
+                        <div class="history-row-icon">
+                            <img class="history-row-image" src="../src/assets/icons/check-colorfull.svg" alt="check">
+                        </div>
+
+                    </div>
+                    <div class="history-row">
+                        <div class="history-row-title">
+                            <p>29/04/2024</p>
+                            <span>18:30</span>
+                        </div>
+
+                        <div class="history-row-icon">
+                            <img class="history-row-image" src="../src/assets/icons/check-colorfull.svg" alt="check">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="column-two">
+            <div class="card">
+                <header class="header">
+                    <h3>Cartão Fidelidade</h3>
+                    <span>Ao fazer cortes de cabelo, o décimo sai de graça!</span>
+                </header>
+
+                <div class="slots">
+                    <div class="item">
+                        <img class="gift-default" src="../src/assets/images/PinCheck.png" alt="check">
+                    </div>
+                    <div class="item">
+                        <img class="gift-default" src="../src/assets/images/PinCheck.png" alt="check">
+                    </div>
+                    <div class="item">
+                        <img class="gift-default" src="../src/assets/images/PinCheck.png" alt="check">
+                    </div>
+                    <div class="item">
+                        <img class="gift-default" src="../src/assets/images/PinCheck.png" alt="check">
+                    </div>
+                    <div class="item">
+                        <img class="gift-default" src="../src/assets/images/PinCheck.png" alt="check">
+                    </div>
+                    <div class="item">
+                        <img class="gift-default" src="../src/assets/images/PinCheck.png" alt="check">
+                    </div>
+                    <div class="item">
+                        <img class="gift-default" src="../src/assets/images/PinCheck.png" alt="check">
+                    </div>
+                    <div class="item">
+                    </div>
+                    <div class="item">
+                    </div>
+                    <div class="item">
+                        <img class="gift-icon" src="../src/assets/icons/gift-default.svg" alt="check">
+                    </div>
+                </div>
+
+                <div class="id-tag">
+                    <h3>ID: 124-537-835-230</h3>
+                </div>
+            </div>
+
+            <div class="progress">
+                <div class="content">
+                    <p>3 cortes restantes</p>
+
+                    <div class="linear-progress">
+                        <div class="bar">
+                            <i class="progress-indicator"></i>
+                        </div>
+                        <span>7 de 10</span>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <img class="progress-gift-icon" src="../src/assets/images/PinGift.png" alt="gift">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const input = document.getElementById('ID');
+        const searchDiv = document.getElementById('search-button');
+
+        input.addEventListener('input', () => {
+            if (input.value.trim() !== '') {
+                searchDiv.style.opacity = "1";
+                input.style.color = "#332b31";
+            } else {
+                searchDiv.style.opacity = "0.6";
+                input.style.color = "#332b31";
+            }
+
+        });
+
+    </script>
+</body>
+
+</html>
