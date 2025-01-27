@@ -2,21 +2,24 @@ import { apiConfig } from "./api-config.js";
 
 export async function searchId({ id }) {
     try {
-        // faz a requisição para enviar os dados do agendamento
-        await fetch(`${apiConfig.baseURL}/search-clients`, {
-            method: 'GET',
-            headers: {
-                "Content-Type": 'application/json'
-            },
-            body: JSON.stringify({
-                id
-            })
-        })
+        // Fazendo a requisição
+        const response = await fetch(`${apiConfig.baseURL}/clients`);
 
-        // exibe mensagem do agendamento realizado
-        alert("Agendamento realizado com sucesso!")
+        // Verifica se a resposta foi bem-sucedida
+        if (!response.ok) {
+            throw new Error(`Erro na requisição: ${response.status}`);
+        }
+
+        // Converte a resposta para JSON
+        const data = await response.json();
+
+        // Filtra os clientes pelo ID selecionado
+        const client = data.clients.find(client => client.id === id);
+
+        // Retorna o cliente encontrado ou null se não existir
+        return client || null;
     } catch (error) {
-        alert("ID inválido. Tente um outro!")
+        alert("Não foi possível buscar os clients.")
         console.log(error);
     }
 }

@@ -20,3 +20,4 @@ import "./styles/input.css"
 
 // js
 import "./modules/form/submit.js"
+import "./modules/load.js"
