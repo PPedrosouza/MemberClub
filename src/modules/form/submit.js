@@ -8,16 +8,17 @@ form.onsubmit = async (event) => {
 
    try {
       // recuperando o nome do cliente
-      const name = clientName.value.trim()
-      if (!name) {
+      const id = clientId.value.trim()
+
+      if (!id) {
          return alert("Informe o ID do cliente!")
       }
 
       // recarrega os dados da página do cliente filtrado 
-      await scheduleDays()
+      await loadLappointmentHistory()
+      await loadLoyaltyCard()
    } catch (error) {
       alert("Não foi possível realizar o agendamento.")
       console.log(error);
-
    }
 }

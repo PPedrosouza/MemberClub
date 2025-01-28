@@ -1,6 +1,6 @@
 import { apiConfig } from "./api-config.js";
 
-export async function searchId({ id }) {
+export async function clientSearchById({ id }) {
     try {
         // Fazendo a requisição
         const response = await fetch(`${apiConfig.baseURL}/clients`);
@@ -17,9 +17,9 @@ export async function searchId({ id }) {
         const client = data.clients.find(client => client.id === id);
 
         // Retorna o cliente encontrado ou null se não existir
-        return client || null;
+        return client
     } catch (error) {
-        alert("Não foi possível buscar os clients.")
+        alert("Não foi possível buscar os clientes pela API.")
         console.log(error);
     }
 }

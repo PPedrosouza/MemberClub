@@ -1,51 +1,58 @@
-import dayjs from "dayjs";
 
-// seleciona as sessões manha, tarde e noite
-const periodMorning = document.getElementById("period-morning")
-const periodAfternoon = document.getElementById("period-afternoon")
-const periodNight = document.getElementById("period-night")
+// seleciona as sessões do histórico, do card e da progress bar
+const user = document.getElementById("user")
+const history = document.getElementById("history")
+const card = document.getElementById("card")
+const progressBar = document.getElementById("progress")
 
-export function contentUsersHistory({ dailySchedules }) {
+export function historyShow({ clientData }) {
     try {
-        // limpa as listas
-        periodMorning.innerHTML = ""
-        periodAfternoon.innerHTML = ""
-        periodNight.innerHTML = ""
+        // user
+        const userPhoto = user.querySelector("#avatar");
+        const userName = user.querySelector("#info h3");
+        const userInfo = user.querySelector("#info span");
 
-        // renderizar os agendamentos por período
-        // biome-ignore lint/complexity/noForEach: <explanation>
-        dailySchedules.forEach((schedule) => {
-            const item = document.createElement("li")
-            const time = document.createElement("strong")
-            const name = document.createElement("span")
+        if (userPhoto) {
+            userPhoto.src = "../src/assets/images/avatar.png";
+            userPhoto.alt = "avatar";
+        }
+        if (userName) userName.textContent = "";
+        if (userInfo) userInfo.textContent = "";
 
-            // add o id do agendamento
-            item.setAttribute("data-id", schedule.id)
+        // history
+        const historyTotalHairCut = history.querySelector("#history-header span")
+        const historylist = history.querySelector("#history-list")
 
-            time.textContent = dayjs(schedule.when).format("HH:mm")
-            name.textContent = schedule.name
+        if (historyTotalHairCut) historyTotalHairCut.textContent = "";
+        if (historylist) historylist.textContent = "";
 
-            // criar ícone de cancelar o agendamento
-            const cancelIcon = document.createElement("img")
-            cancelIcon.classList.add("cancel-icon")
-            cancelIcon.setAttribute("src", "./src/assets/cancel.svg")
-            cancelIcon.setAttribute("alt", "Cancelar")
+        // card
+        const slotsItensImg = card.querySelector("#slots .item img")
+        const idTag = card.querySelector(".id-tag")
 
-            // adiciona o tempo, nome e ícone no item
-            item.append(time, name, cancelIcon)
-            
-            // obtém somente a hora
-            const hour = dayjs(schedule.when).hour()
+        if (slotsItensImg) {
+            userPhoto.src = "";
+            userPhoto.alt = "";
+            slotsItensImg.style.display = "none";
+        }
+        if (idTag) idTag.textContent = "";
 
-            // renderiza o agendamento na sessão (manhã, tarde ou noite)
-            if (hour <= 12) {
-                periodMorning.appendChild(item)
-            } else if (hour > 12 && hour < 18) {
-                periodAfternoon.appendChild(item)
-            } else {
-                periodNight.appendChild(item)
-            }
-        })
+        // progress bar
+        const contentParagraph = progressBar.querySelector(".content p");
+        const linearProgressSpan = progressBar.querySelector(".linear-progress span");
+        const progressIndicator = progressBar.querySelector(".linear-progress .bar .progress-indicator")
+
+        if (contentParagraph) contentParagraph.textContent = "";
+        if (linearProgressSpan) linearProgressSpan.textContent = "";
+        if (linearProgressSpan) linearProgressSpan.textContent = "";
+        if (progressIndicator) progressIndicator.style.width = "0";
+
+
+        // renderizar os dados do cliente
+        clientData.forEach((client) => {
+            const userName = document.createElement("h3")
+            const userInfo = document.createElement("span")
+        });
     } catch (error) {
         alert("Não foi possível exibir os agendamentos.")
         console.log(error);
