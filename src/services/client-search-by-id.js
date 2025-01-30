@@ -12,14 +12,16 @@ export async function clientSearchById({ id }) {
 
         // Converte a resposta para JSON
         const data = await response.json();
-
+        console.log("Dados da API:", data);  // Adiciona um log para visualizar os dados
+        
         // Filtra os clientes pelo ID selecionado
-        const client = data.clients.find(client => client.id === id);
+        const client = data.find(client => client.id === id);  // Alterando para usar o array diretamente
+        console.log("Dados do client:", client);  // Adiciona um log para visualizar os dados
 
         // Retorna o cliente encontrado ou null se não existir
-        return client
+        return client;
     } catch (error) {
-        alert("Não foi possível buscar os clientes pela API.")
+        alert("Não foi possível buscar o cliente pela API.")
         console.log(error);
     }
 }

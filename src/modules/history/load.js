@@ -5,18 +5,15 @@ import { historyShow } from "./show";
 const clientId = document.getElementById("client-id")
 
 export async function contentUsersHistory() {
-    try {
-        // obtém o id do input
-        const id = clientId.value
+    const id = clientId.value;
 
-        // busca na API o histórico de agendamentos do cliente
-        const appointmentHistory = await clientSearchById({ id })
+    // Busca na API o histórico de agendamentos do cliente
+    const client = await clientSearchById({ id });
 
-        // exibe o histórico
-        historyShow({appointmentHistory})
-
-    } catch (error) {
-        alert("Não foi possível exibir os agendamentos.")
-        console.log(error);
+    // Exibe o histórico
+    if (client) {
+        historyShow({ client });  // Passa o cliente diretamente
+    } else {
+        console.log("Cliente não encontrado.");
     }
 }

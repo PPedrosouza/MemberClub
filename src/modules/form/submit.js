@@ -1,4 +1,5 @@
 import dayjs from "dayjs"
+import { contentUsersHistory } from "../history/load"
 
 const form = document.querySelector("form")
 const clientId = document.getElementById("client-id")
@@ -7,18 +8,17 @@ form.onsubmit = async (event) => {
    event.preventDefault()
 
    try {
-      // recuperando o nome do cliente
-      const id = clientId.value.trim()
+      const id = clientId.value.trim();
+      console.log("ID do cliente:", id);
 
       if (!id) {
-         return alert("Informe o ID do cliente!")
+         return alert("Informe o ID do cliente!");
       }
 
       // recarrega os dados da página do cliente filtrado 
-      await loadLappointmentHistory()
-      await loadLoyaltyCard()
+      await contentUsersHistory();
    } catch (error) {
-      alert("Não foi possível realizar o agendamento.")
+      alert("Não foi possível fazer a busca.");
       console.log(error);
    }
 }

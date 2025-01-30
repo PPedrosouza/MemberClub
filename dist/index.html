@@ -20,7 +20,7 @@
         <div class="image-div">
             <img src="./src/assets/images/Logo.png" alt="logo">
         </div>
-        <form action="" class="search-div">
+        <form class="search-div">
             <input type="text" name="client-id" id="client-id" placeholder="ID do cartão">
             <a href="#" class="search-button" id="search-button">
                 <img src="./src/assets/icons/arrow-button.svg" id="search-icon" />
@@ -28,7 +28,7 @@
         </form>
     </header>
 
-    <main id="content">
+    <main id="content" style="visibility : hidden;">
         <div id="column-one">
             <div id="user">
                 <img id="avatar" src="../src/assets/images/avatar.png" alt="avatar">
@@ -41,30 +41,30 @@
             <div id="history">
                 <header id="history-header">
                     <h4>Histórico</h4>
-                    <span>- cortes</span>
+                    <span></span>
                 </header>
                 <div id="history-list">
-                    <!-- <div class="history-row">
+                    <div class="history-row">
                         <div class="history-row-title">
-                            <p>29/04/2024</p>
-                            <span>18:30</span>
+                            <!-- <p>29/04/2024</p>
+                            <span>18:30</span> -->
                         </div>
 
                         <div class="history-row-icon">
-                            <img class="history-row-image" src="../src/assets/icons/check-colorfull.svg" alt="check">
+                            <!-- <img class="history-row-image" src="../src/assets/icons/check-colorfull.svg" alt="check"> -->
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>
         <div id="column-two">
-            <div class="card">
+            <div class="card" id="card">
                 <header class="header">
                     <h3>Cartão Fidelidade</h3>
                     <span>Ao fazer cortes de cabelo, o décimo sai de graça!</span>
                 </header>
 
-                <div class="slots">
+                <div class="slots" id="slots">
                     <!-- <div class="item">
                         <img class="gift-default" src="../src/assets/images/PinCheck.png" alt="check">
                     </div>
@@ -110,19 +110,19 @@
                 </div>
 
                 <div class="id-tag">
-                    <h3>ID: -</h3>
+                    <h3></h3>
                 </div>
             </div>
 
-            <div class="progress">
+            <div class="progress" id="progress">
                 <div class="content">
-                    <p>- cortes restantes</p>
+                    <p></p>
 
                     <div class="linear-progress">
                         <div class="bar">
                             <i class="progress-indicator"></i>
                         </div>
-                        <span>- de 10</span>
+                        <span></span>
                     </div>
                 </div>
 
