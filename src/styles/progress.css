@@ -85,8 +85,8 @@
                 flex-grow: 1;
 
                 & .progress-indicator {
-                    /* width: 15.20625rem; */
-                    width: 0;
+                    width: 15.20625rem;
+                    /* width: 0; */
                     height: 0.5rem;
 
                     background: var(--gradient-base);

@@ -49,9 +49,20 @@ export function cardShow({ client }) {
 
         contentParagraph.innerHTML = client.loyaltyCard.cutsRemaining + " cortes restantes"
         linearProgressSpan.innerHTML = client.loyaltyCard.totalCuts + " de " + client.loyaltyCard.cutsNeeded
-        const progressPercentage = (client.loyaltyCard.totalCuts / client.loyaltyCard.cutsNeeded) * 100;
-        progressIndicator.style.width = `${progressPercentage}%`;
+        const totalWidthInRem = 21.9375; // Largura total em rem
+        const remToPx = 16; // Definindo que 1rem = 16px (padrão)
         
+        const totalWidthInPx = totalWidthInRem * remToPx; // Converte para px
+        
+        // Calculando o progresso em pixels
+        const progressWidthInPx = (client.loyaltyCard.totalCuts / client.loyaltyCard.cutsNeeded) * totalWidthInPx;
+        
+        // Atualizando o width do progressIndicator
+        progressIndicator.style.width = `${progressWidthInPx}px`;
+        
+        if(client.loyaltyCard.cutsRemaining == 0){
+            alert("🎉 Parabéns! Seu próximo corte é gratuito! 🎉")
+        }
     } catch (error) {
         alert("Não foi possível exibir os dados do usuário.");
         console.log(error);
