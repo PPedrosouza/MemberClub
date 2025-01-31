@@ -1,17 +1,15 @@
 import { clientSearchById } from "../../services/client-search-by-id";
-import { historyShow } from "./show";
+import { cardShow } from "./show";
 
 const clientId = document.getElementById("client-id")
 
-export async function contentUserHistory() {
+export async function contentUserCard() {
     const id = clientId.value;
 
-    // Busca na API o histórico de agendamentos do cliente
     const client = await clientSearchById({ id });
 
-    // Exibe o histórico
     if (client) {
-        historyShow({ client });  // Passa o cliente diretamente
+        cardShow({ client }); 
     } else {
         console.log("Cliente não encontrado.");
     }

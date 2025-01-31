@@ -11,17 +11,6 @@ const history = document.getElementById("history")
 const historyTotalHairCut = history.querySelector("#history-header span")
 const historylist = history.querySelector("#history-list")
 
-// card
-const card = document.getElementById("card")
-const slotsItensImg = card.querySelector("#slots .item img")
-const idTag = card.querySelector(".id-tag")
-
-// progress bar
-const progressBar = document.getElementById("progress")
-const contentParagraph = progressBar.querySelector(".content p");
-const linearProgressSpan = progressBar.querySelector(".linear-progress span");
-const progressIndicator = progressBar.querySelector(".linear-progress .bar .progress-indicator")
-
 export function historyShow({ client }) {
     try {
         if (!client) {
@@ -89,16 +78,5 @@ function cleanOldUser() {
 
     if (historyTotalHairCut) historyTotalHairCut.textContent = "";
     if (historylist) historylist.textContent = "";
-
-    if (slotsItensImg) {
-        userPhoto.src = "";
-        userPhoto.alt = "";
-        slotsItensImg.style.display = "none";
-    }
-    if (idTag) idTag.textContent = "";
-
-    if (contentParagraph) contentParagraph.textContent = "";
-    if (linearProgressSpan) linearProgressSpan.textContent = "";
-    if (linearProgressSpan) linearProgressSpan.textContent = "";
-    if (progressIndicator) progressIndicator.style.width = "0";
+    
 }

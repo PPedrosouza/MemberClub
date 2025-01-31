@@ -12,11 +12,10 @@ export async function clientSearchById({ id }) {
 
         // Converte a resposta para JSON
         const data = await response.json();
-        console.log("Dados da API:", data);  // Adiciona um log para visualizar os dados
         
         // Filtra os clientes pelo ID selecionado
-        const client = data.find(client => client.id === id);  // Alterando para usar o array diretamente
-        console.log("Dados do client:", client);  // Adiciona um log para visualizar os dados
+        const client = data.find(client => client.id === id);  
+        
 
         // Retorna o cliente encontrado ou null se não existir
         return client;
